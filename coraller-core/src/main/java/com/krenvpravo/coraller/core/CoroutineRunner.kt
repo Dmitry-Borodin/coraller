@@ -1,4 +1,4 @@
-package com.krenvpravo.coraller_core
+package com.krenvpravo.coraller.core
 
 import kotlinx.coroutines.experimental.Job
 

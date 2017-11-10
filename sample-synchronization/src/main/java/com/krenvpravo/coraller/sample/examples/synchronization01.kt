@@ -1,9 +1,9 @@
-package com.krenvpravo.sample.examples
+package com.krenvpravo.coraller.sample.examples
 
 import android.util.Log
-import com.krenvpravo.coraller_android.backgroundSync
-import com.krenvpravo.coraller_android.onUiThread
-import com.krenvpravo.sample.CORALLER_TAG
+import com.krenvpravo.coraller.android.backgroundSync
+import com.krenvpravo.coraller.android.onUiThread
+import com.krenvpravo.coraller.sample.CORALLER_TAG
 
 fun synchronization01() {
     Log.e(CORALLER_TAG, "synchronization01 task is started")

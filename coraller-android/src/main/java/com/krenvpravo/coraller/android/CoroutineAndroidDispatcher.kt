@@ -1,8 +1,8 @@
-package com.krenvpravo.coraller_android
+package com.krenvpravo.coraller.android
 
 import android.os.Handler
 import android.os.Looper
-import com.krenvpravo.coraller_core.CoroutineUiRunner
+import com.krenvpravo.coraller.core.CoroutineUiRunner
 import kotlinx.coroutines.experimental.*
 import java.util.concurrent.TimeUnit
 import kotlin.coroutines.experimental.CoroutineContext

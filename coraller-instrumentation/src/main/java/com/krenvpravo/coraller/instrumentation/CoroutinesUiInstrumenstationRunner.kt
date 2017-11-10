@@ -1,7 +1,7 @@
-package com.krenvpravo.coraller_instrumentation
+package com.krenvpravo.coraller.instrumentation
 
-import com.krenvpravo.coraller_android.UI
-import com.krenvpravo.coraller_core.CoroutineUiRunner
+import com.krenvpravo.coraller.android.UI
+import com.krenvpravo.coraller.core.CoroutineUiRunner
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 

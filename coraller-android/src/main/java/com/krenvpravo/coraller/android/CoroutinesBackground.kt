@@ -1,4 +1,4 @@
-package com.krenvpravo.coraller_android
+package com.krenvpravo.coraller.android
 
 import kotlinx.coroutines.experimental.*
 import java.lang.ref.WeakReference

@@ -1,4 +1,4 @@
-package com.krenvpravo.coraller_instrumentation
+package com.krenvpravo.coraller.instrumentation
 
 import android.support.test.espresso.IdlingResource
 

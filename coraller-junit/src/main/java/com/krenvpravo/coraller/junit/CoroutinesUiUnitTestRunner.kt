@@ -1,6 +1,6 @@
-package com.krenvpravo.coraller_junit
+package com.krenvpravo.coraller.junit
 
-import com.krenvpravo.coraller_core.CoroutineUiRunner
+import com.krenvpravo.coraller.core.CoroutineUiRunner
 import kotlinx.coroutines.experimental.CompletionHandler
 
 import kotlinx.coroutines.experimental.DisposableHandle

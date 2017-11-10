@@ -1,9 +1,9 @@
-package com.krenvpravo.sample
+package com.krenvpravo.coraller.sample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.krenvpravo.sample.examples.synchronization01
+import com.krenvpravo.coraller.sample.examples.synchronization01
 
 val CORALLER_TAG = "coraller_tag"
 
