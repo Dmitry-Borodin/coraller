@@ -5,9 +5,12 @@ import com.krenvpravo.coraller.android.backgroundSync
 import com.krenvpravo.coraller.android.onUiThread
 import com.krenvpravo.coraller.sample.CORALLER_TAG
 
+/**
+ * Checks, that sequential switching between threads not leading to synchronization issues
+ */
 fun synchronization01() {
     Log.e(CORALLER_TAG, "synchronization01 task is started")
-    repeat(1000_00) {
+    repeat(100_000) {
         val list = mutableListOf("bar")
         onUiThread {
             backgroundSync {
