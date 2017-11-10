@@ -28,4 +28,5 @@ kotlin {
 
 dependencies {
     api project(':coraller-android')
+    implementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
 }
