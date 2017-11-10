@@ -1,0 +1,13 @@
+apply plugin: 'kotlin'
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+dependencies {
+    compile project(':coraller-core')
+}
+
+

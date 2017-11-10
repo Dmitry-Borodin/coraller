@@ -1,0 +1,1 @@
+include ':sample-synchronization', ':coraller-android', ':coraller-junit', ':coraller-instrumentation', ':coraller-core'
