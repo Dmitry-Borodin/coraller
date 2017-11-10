@@ -25,13 +25,15 @@ allprojects {
 }
 
 ext {
+    versionCode = 1
+    versionName = "0.1"
+
     targetSdkVersion = 26
     minSdkVersion = 16
     compileSdkVersion = 26
-    buildToolsVersion = '26.1.0'
+    buildToolsVersion = '26.0.2'
 
     supportLibraryVersion = '26.1.0'
-    playServicesVersion = '11.4.2'
     espressoVersion = '3.0.1'
 }
 

@@ -1,13 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.compileSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -28,5 +30,5 @@ kotlin {
 
 dependencies {
     api project(':coraller-android')
-    implementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
+    implementation "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
 }
