@@ -5,14 +5,24 @@ import android.os.Bundle
 import android.util.Log
 import com.krenvpravo.coraller.sample.examples.synchronization01
 
-val CORALLER_TAG = "coraller_tag"
+const val CORALLER_TAG = "coraller_tag"
 
 class MainActivity : AppCompatActivity() {
+
+    private val presenter = MainPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        synchronization01()
-        Log.e(CORALLER_TAG, "onCreate is done")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.onViewStarted()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        presenter.onViewStopped()
     }
 }
