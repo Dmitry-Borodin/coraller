@@ -15,6 +15,7 @@ class BigLogicPresenter: MainScreenContract.Presenter {
     override fun onViewStarted(view : MainScreenContract.View) {
         this.view = view
         runExample()
+        showObjectInView(this::class.java.simpleName + "example run finished")
     }
 
     override fun onViewStopped() {
@@ -25,12 +26,14 @@ class BigLogicPresenter: MainScreenContract.Presenter {
         val stringList = backgroundSync {
             generateListHeavy()
         }
-        showObjectToView(stringList)
+        showObjectInView(stringList)
     }
 
-    //this functions can be not "suspend" even when they are called from
-    private fun showObjectToView(stringList: Any) =
-            Log.d(CORALLER_TAG, stringList.toString())
+    /**
+     *  This functions can be not "suspend" even when they are called from coroutines - since they don't suspend
+     */
+    private fun showObjectInView(textObject: Any) =
+            Log.d(CORALLER_TAG, textObject.toString())
 
     private fun generateListHeavy() = mutableListOf<String>()
 }
