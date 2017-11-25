@@ -2,14 +2,13 @@ package com.krenvpravo.coraller.sample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.krenvpravo.coraller.sample.examples.synchronization01
+import com.krenvpravo.coraller.sample.presenters.Synchronization1Presenter
 
 const val CORALLER_TAG = "coraller_tag"
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainScreenContract.View {
 
-    private val presenter = MainPresenter()
+    private val presenter = Synchronization1Presenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        presenter.onViewStarted()
+        presenter.onViewStarted(this)
     }
 
     override fun onStop() {
