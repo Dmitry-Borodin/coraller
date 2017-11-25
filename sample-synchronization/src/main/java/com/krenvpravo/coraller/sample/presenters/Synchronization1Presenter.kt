@@ -24,6 +24,7 @@ class Synchronization1Presenter : MainScreenContract.Presenter {
 
     /**
      * Checks, that sequential switching between threads not leading to synchronization issues
+     * Logs with sync issue will never appear in the logs
      */
     private fun runExample() {
         Log.e(CORALLER_TAG, "synchronization01 task is started")
@@ -31,15 +32,20 @@ class Synchronization1Presenter : MainScreenContract.Presenter {
             val list = mutableListOf("bar")
             onUiThread {
                 backgroundSync {
-                    if (list.size != 1) Log.e(CORALLER_TAG, "background second sync issue")
+                    if (list.size != 1) submitSyncIssue("background second sync issue")
                     list.add("foo")
-                    if (list.size != 2) Log.e(CORALLER_TAG, "background first sync issue")
+                    if (list.size != 2) submitSyncIssue("background first sync issue")
                 }
-                if (list.size != 2) Log.e(CORALLER_TAG, "UI first sync issue")
+                if (list.size != 2) submitSyncIssue("UI first sync issue")
                 list.removeAt(1)
-                if (list.size != 1) Log.e(CORALLER_TAG, "UI second sync issue")
+                if (list.size != 1) submitSyncIssue("UI second sync issue")
             }
         }
         Log.e(CORALLER_TAG, "onCreate is done")
+    }
+
+    private fun submitSyncIssue(string: String) {
+        Log.e(CORALLER_TAG, string)
+        throw RuntimeException(string)
     }
 }

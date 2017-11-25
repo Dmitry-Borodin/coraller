@@ -10,6 +10,5 @@ object MainScreenContract {
         fun onViewStopped()
     }
 
-    interface View {
-    }
+    interface View
 }
